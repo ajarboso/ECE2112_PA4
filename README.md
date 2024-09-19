@@ -27,6 +27,7 @@ storytelling, analyze the data and present different (i) data frames; and (ii) v
 
 a. Filename: Instru = [“Name”, “GEAS”, “Electronics >70”]; where track is constant as
 Instrumentation and hometown Luzon
+
 b. Filename: Mindy = [ “Name”, “Track”, “Electronics”, “Average >=55”]; where hometown is
 constant as Mindanao and gender Female
 
@@ -41,6 +42,7 @@ Instru
 ```
 
 Output:
+
 ![image](https://github.com/user-attachments/assets/9d1cab0f-bf20-4f0c-93e5-e0149f5eb8de)
 
 Code for letter B:
