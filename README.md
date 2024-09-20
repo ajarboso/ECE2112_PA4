@@ -74,6 +74,101 @@ Further Filtering:
 
 - After calculating the average, rows are further filtered based on specific conditions e.g., Average score >= 55, and selected columns are displayed.
 
+2. reate a visualization that shows how the different features contributes to average grade. 
 
+Doeschosen track in college, gender, or hometown contributes to a higher average score?
 
+#### We first group the data by Track, Gender, and Hometown to find the average score
+```
+import matplotlib.pyplot as plt
+
+# Grouping by Track, Gender, and Hometown to get the mean Average score
+track_avg = boards.groupby('Track')['Average'].mean()
+gender_avg = boards.groupby('Gender')['Average'].mean()
+hometown_avg = boards.groupby('Hometown')['Average'].mean()
+```
+- ```groupby``` is used to separate the data by the chosen categories.
+- ```mean() ``` calculates the average score for each group.
+
+#### Bar plot for Average score by Track
+
+```
+# Bar plot for Average score by Track
+#Set the figure size
+plt.figure(figsize=(6,7)) 
+
+#set average to show in bar in blue color
+track_avg.plot(kind='bar', color='blue')
+
+#labels the graph
+plt.title('Mean Average Score by Track')
+plt.ylabel('Mean Average Score')
+plt.xlabel('Track')
+
+#shows the table
+plt.show()
+```
+
+ouput: 
+
+![image](https://github.com/user-attachments/assets/8d7c256e-7f90-4b05-8fb7-aef42c6b37d4)
+
+#### Bar plot for Average score by Gender
+
+```
+# Bar plot for Average score by Gender
+#Set the figure size
+plt.figure(figsize=(6,7))
+
+#set average to show in bar in orange color
+gender_avg.plot(kind='bar', color='orange')
+
+#labels the graph
+plt.title('Mean Average Score by Gender')
+plt.ylabel('Mean Average Score')
+plt.xlabel('Gender')
+
+#shows the table
+plt.show()
+
+```
+
+Output:
+
+![image](https://github.com/user-attachments/assets/8400876a-2fd5-4462-b00e-1463fbe1d4f0)
+
+#### Bar plot for Average score by Hometown
+```
+# Bar plot for Average score by Hometown
+#Set the figure size
+plt.figure(figsize=(6,7))
+
+#set average to show in bar in green color
+hometown_avg.plot(kind='bar', color='green')
+
+#labels the graph
+plt.title('Mean Average Score by Hometown')
+plt.ylabel('Mean Average Score')
+plt.xlabel('Hometown')
+
+#shows the table
+plt.show()
+
+Output:
+
+![image](https://github.com/user-attachments/assets/91f286c8-fd9f-4103-b324-a1ff72c41970)
+
+#### Codes used in the 3 Bar plots
+
+- ```plt.figure()``` sets the size of the plot.
+
+- ```plot(kind='bar')``` creates a bar chart.
+
+- Title and label to label the graph.
+
+- ```plt.show``` To show the graph
+
+### Revisions
+
+- Revised the visualization part. 
 
