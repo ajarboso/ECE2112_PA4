@@ -153,6 +153,7 @@ plt.xlabel('Hometown')
 
 #shows the table
 plt.show()
+```
 
 Output:
 
